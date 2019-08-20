@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="icon" href="favicon.ico">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="ttt_container">
+            <!-- TOP ROW -->
+            <div id="sqr_3-1" class="open sqr corner top-row left-column diagonal-TtB"></div>
+            <div id="sqr_3-2" class="open sqr top-row middle-column"></div>
+            <div id="sqr_3-3" class="open sqr corner top-row right-column diagonal-BtT"></div>
+
+            <!-- MIDDLE ROW -->
+            <div id="sqr_2-1" class="open sqr middle-row left-column"></div>
+            <div id="sqr_2-2" class="open sqr center middle-row middle-column diagonal-TtB diagonal-BtT"></div>
+            <div id="sqr_2-3" class="open sqr middle-row right-column"></div>
+
+            <!-- BOTTOM ROW -->
+            <div id="sqr_1-1" class="open sqr corner bottom-row left-column diagonal-BtT"></div>
+            <div id="sqr_1-2" class="open sqr bottom-row middle-column"></div>
+            <div id="sqr_1-3" class="open sqr corner bottom-row right-column diagonal-TtB"></div>
+        </div>
+        <h2 id="game-over"></h2>
+        <h3><a href="index.html">New Game</a></h3>
+
+        <script src="scripts/app.js"></script>
+    </body>
+</html>
