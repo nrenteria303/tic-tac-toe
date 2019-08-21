@@ -68,6 +68,8 @@ function computerGo() {
             for (let i = 0; i < groups.length; i++) {
                 if (checkForTwo(groups[i], "O")) {
                     markO(groups[i][openIndex]);
+                    checkForGameOver();
+                    return;
                 }
             }
         } else if (checkkAllForXs()) {
