@@ -84,8 +84,11 @@ function computerGo() {
             markO(middleRow[2]);
         } else if (topRow[1].classList.value.includes("open")) {
             markO(topRow[1]);
-        } else {
+        } else if (middleRow[0].classList.value.includes("open")) {
             markO(middleRow[0]);
+        } else {
+            let currentOpenSquares = document.querySelectorAll(".open");
+            markO(currentOpenSquares[0]);
         }
     }
     checkForGameOver();
