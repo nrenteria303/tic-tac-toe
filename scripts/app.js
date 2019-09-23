@@ -16,12 +16,8 @@ let roundCount = 0;
 let openIndex;
 
 function markO(square) {
-    if (square.classList.value.includes("open")) {
-        square.innerHTML = "O"
-        square.classList.remove("open");
-    } else {
-        return;
-    }
+    square.innerHTML = "O"
+    square.classList.remove("open");
 }
 
 function checkForTwo(group, marker) {
@@ -80,10 +76,16 @@ function computerGo() {
             }
         } else if (cornerSquares[1].innerHTML === "X" && cornerSquares[2].innerHTML === "X" && middleRow[2].classList.value.includes("open")) {
             markO(middleRow[2]);
-        } else if (middleRow[2].classList.value.includes("open")) {
+        } else if (cornerSquares[1].innerHTML === "X" && bottomRow[1].innerHTML === "X" && middleRow[2].classList.value.includes("open")) {
             markO(middleRow[2]);
+        } else if (cornerSquares[0].innerHTML === "X" && bottomRow[1].innerHTML === "X" && middleRow[0].classList.value.includes("open")) {
+            markO(middleRow[0]);
+        } else if (centerSquare.innerHTML === "X" && cornerSquares[3].innerHTML === "X" && topRow[2].classList.value.includes("open")) {
+            markO(topRow[2]);
         } else if (topRow[1].classList.value.includes("open")) {
             markO(topRow[1]);
+        } else if (middleRow[2].classList.value.includes("open")) {
+            markO(middleRow[2]);
         } else if (middleRow[0].classList.value.includes("open")) {
             markO(middleRow[0]);
         } else {
@@ -120,9 +122,10 @@ function checkForGameOver() {
             groups[i][0].style.background = "blue";
             groups[i][1].style.background = "blue";
             groups[i][2].style.background = "blue";
-            gameOver.innerHTML = "GAME OVER";
+            gameOver.innerHTML = "GAME OVER: YOU LOSE";
         } else if (currentOpenSquares.length === 0) {
-            gameOver.innerHTML = "GAME OVER";
+            gameOver.innerHTML = "GAME OVER: DRAW";
+
         }
     }
 }

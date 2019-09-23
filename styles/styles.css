@@ -72,6 +72,7 @@ body {
   #game-over{
     text-align: center;
     font-family: 'Press Start 2P', monospace;
+    height: 30px;
   }
 
   a {
