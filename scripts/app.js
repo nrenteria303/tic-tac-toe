@@ -76,10 +76,18 @@ function computerGo() {
             }
         } else if (cornerSquares[1].innerHTML === "X" && cornerSquares[2].innerHTML === "X" && middleRow[2].classList.value.includes("open")) {
             markO(middleRow[2]);
+        } else if (cornerSquares[0].innerHTML === "X" && cornerSquares[3].innerHTML === "X" && middleRow[2].classList.value.includes("open")) {
+            markO(middleRow[2]);
         } else if (cornerSquares[1].innerHTML === "X" && bottomRow[1].innerHTML === "X" && middleRow[2].classList.value.includes("open")) {
             markO(middleRow[2]);
         } else if (cornerSquares[0].innerHTML === "X" && bottomRow[1].innerHTML === "X" && middleRow[0].classList.value.includes("open")) {
             markO(middleRow[0]);
+        } else if (roundCount === 1 && middleRow[1].innerHTML === "O") {
+            if (middleRow[0].innerHTML === "X" && topRow[0].classList.value.includes("open")) {
+                markO(topRow[0]);
+            } else if (middleRow[2].innerHTML === "X" && topRow[2].classList.value.includes("open")) {
+                markO(topRow[2]);
+            }
         } else if (centerSquare.innerHTML === "X" && cornerSquares[3].innerHTML === "X" && topRow[2].classList.value.includes("open")) {
             markO(topRow[2]);
         } else if (topRow[1].classList.value.includes("open")) {
